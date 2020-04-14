@@ -1,0 +1,83 @@
+Instalaões
+1 - npm install -g @adonisjs/cli  (instalação do CLI do adonis de forma global)
+2 - npm install -D eslint and npx eslint --init
+3 - npm i --save pg (para adicionar os drivers de comunicação coms postgres)
+4 -
+5 -
+6 - 
+7 - 
+8 - 
+9 -
+10 -
+
+
+Comando do Adonis em orgem
+1 - adonis new gonode --api-only (Cria Projeto com o nome de gonode utilizando pacotes simples de requisições)
+2 - adonis new -h (Mostra todas as opções desse comando)
+3 - adonis serve --dev (Coloca o servidor ONLINE, e a opção --dev ativa a funcionalidade do "nodemon", se for usar em produção , rode sem o --dev )
+4 - adonis migration:run (Para fazer a migração das migrations para o banco de dados)
+5 -
+6 - 
+7 - 
+8 - 
+9 -
+10 -
+
+
+
+Provessos
+1 - criando o primeiro projeto com (adonis new gonode --api-only)
+2 - Configurando o ESlint
+3 - 
+4 -
+5 -
+6 - 
+7 - 
+8 - 
+9 -
+10 -
+11 - 
+12 - 
+13 - 
+14 -
+15 -
+16 - 
+17 - 
+18 - 
+19 -
+20 -
+
+
+
+
+Informações 
+
+   Ordem do npx eslint --init
+        1 - To check syntax only 
+        2 - JavaScript modules (import/export)
+        3 - React
+        4 - No
+        5 - Node
+        6 - JavaScript
+        7 - JSON
+        8 - Y
+
+
+
+
+
+
+
+
+
+
+1 - 
+2 - 
+3 - 
+4 -
+5 -
+6 - 
+7 - 
+8 - 
+9 -
+10 -
