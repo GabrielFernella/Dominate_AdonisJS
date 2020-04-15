@@ -16,22 +16,32 @@ Comando do Adonis em orgem
 2 - adonis new -h (Mostra todas as opções desse comando)
 3 - adonis serve --dev (Coloca o servidor ONLINE, e a opção --dev ativa a funcionalidade do "nodemon", se for usar em produção , rode sem o --dev )
 4 - adonis migration:run (Para fazer a migração das migrations para o banco de dados)
-5 -
-6 - 
-7 - 
-8 - 
-9 -
-10 -
+5 - adonis make:controller User (Cria um controller de usuários), escolha a opção http
+6 - adonis route:list (Mostra todas as Rotas criadas)
+7 - adonis make:controller Session (Criar o controller de Session)
+8 - adonis make:controller ForgotPassword (Criar um controller de recuperação de senha)
+9 - adonis migration:rollback (Esse comando desfaz as migrations já executadas) para fazer as migrations novamente => adonis migration:run
+10 - 
+11 - 
+12 - 
+13 - 
+14 -
+15 -
+16 - 
+17 - 
+18 - 
+19 -
+20 -
 
 
 
 Provessos
 1 - criando o primeiro projeto com (adonis new gonode --api-only)
 2 - Configurando o ESlint
-3 - 
-4 -
-5 -
-6 - 
+3 - Configure o .env e conecte-se com o banco, execute "adonis migration:run" para migrar a tabela para o banco
+4 - Crie o controller de User usando o comando "adonis make:controller User" e depois vc poderá inseir novos usuários ao banco com o insomnia
+5 - Token de autenticação usando "adonis make:controller Session"
+6 - Recuperação de senha, criar ForgotController e edite a migration User adicionando dois campos (token , token_created_at)
 7 - 
 8 - 
 9 -
@@ -61,6 +71,9 @@ Informações
         6 - JavaScript
         7 - JSON
         8 - Y
+
+
+        CTX => Contexto da requisição
 
 
 
