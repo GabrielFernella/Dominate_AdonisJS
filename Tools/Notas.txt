@@ -41,8 +41,8 @@ Provessos
 3 - Configure o .env e conecte-se com o banco, execute "adonis migration:run" para migrar a tabela para o banco
 4 - Crie o controller de User usando o comando "adonis make:controller User" e depois vc poderá inseir novos usuários ao banco com o insomnia
 5 - Token de autenticação usando "adonis make:controller Session"
-6 - Recuperação de senha, criar ForgotController e edite a migration User adicionando dois campos (token , token_created_at)
-7 - 
+6 - Recuperação de senha, criar ForgotController e edite a migration User adicionando dois campos (token , token_created_at) 
+7 - Mail, enviando o email de recuperação de senha para o usuário. Notion tem mais detalhes.
 8 - 
 9 -
 10 -
