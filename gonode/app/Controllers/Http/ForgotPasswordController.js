@@ -1,5 +1,6 @@
 'use strict'
 
+const moment = require('moment')
 const crypto = require('crypto')
 const User = use('App/Models/User')
 const Mail = use('Mail')
@@ -35,6 +36,33 @@ class ForgotPasswordController {
       return response.status(error.status).send({ error: { message: 'Algo não deu certo, esse e-mail existe?' }})
     }
   }
+
+  async update ({ request, response }) {
+    try {
+      const { token, password } = request.all()
+
+      const user = await User.findByOrFail('token', token)
+
+      //Verifica se faz mais de dois dias que essa requisição foi feita, se sim, ela é negada
+      const tokenExpired =  moment()
+        .subtract('2','days') //Nessa função os paramentros são a qauntidades de dias que vc está subtraindo da data atual
+        .isAfter(user.token_created_at) //irá comparar com o valor da data do created_at
+
+        if(tokenExpired){
+          return response.status(401).send({ error: { message: 'Token expirado.' }})
+        }
+
+        user.token = null
+        user.token_created_at = null
+        user.password = password
+
+        await user.save()
+
+    } catch (error) {
+      return response.status(error.status).send({ error: { message: 'Algo deu errado ao resetar sua senha' }})
+    }
+  }
+
 }
 
 module.exports = ForgotPasswordController
